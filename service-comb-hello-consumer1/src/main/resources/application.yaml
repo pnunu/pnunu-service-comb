@@ -1,0 +1,14 @@
+zuul:
+  routes:
+    Demo1Provider: /Demo1Provider/**
+
+ribbon:
+  eureka:
+    enabled: false
+
+server:
+  port: 9300
+
+servicecomb:
+  tracing:
+    enabled: false

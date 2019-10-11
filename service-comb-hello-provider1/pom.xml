@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>pnunu</groupId>
+    <version>1.0</version>
+    <artifactId>service-comb-hello-provider1</artifactId>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <java-chassis.version>1.2.0</java-chassis.version>
+        <spring-boot-1.version>1.5.14.RELEASE</spring-boot-1.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>java-chassis-dependencies</artifactId>
+                <version>${java-chassis.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-1.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>pnunu</groupId>
+            <artifactId>service-comb-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>spring-boot-starter-provider</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-flowcontrol-qps</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-bizkeeper</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>handler-tracing-zipkin</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

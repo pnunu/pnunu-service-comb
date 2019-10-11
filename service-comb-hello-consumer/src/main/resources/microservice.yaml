@@ -1,0 +1,12 @@
+APPLICATION_ID: hello.world.demo
+service_description:
+  name: DemoConsumer
+  version: 1.0.0
+servicecomb:
+  rest:
+    address: 0.0.0.0:9100
+  service:
+    registry:
+      address: http://127.0.0.1:30100   #本地注册中心的地址
+#service_description:
+#  environment: development

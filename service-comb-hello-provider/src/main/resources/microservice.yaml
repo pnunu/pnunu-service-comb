@@ -1,0 +1,11 @@
+APPLICATION_ID: hello.world.demo
+service_description:
+  name: DemoProvider
+  version: 1.0.0
+servicecomb:
+  rest:
+    address: 0.0.0.0:9000
+  service:
+    registry:
+      address: http://127.0.0.1:30100
+
